@@ -24,6 +24,7 @@
       * [3.2.3. Listing all articles](#323-listing-all-articles)
       * [3.2.4. Editing an article](#324-editing-an-article)
       * [3.2.5. Searching for an article](#325-searching-for-an-article)
+      * [3.2.6 Filtering all articles](#326-filtering-all-articles)
   * [3.3. Other Commands](#33-other-commands)
       * [3.3.1. Help ](#331-viewing-help--help)
       * [3.3.2. Exit](#332-exiting-the-program--exit)
@@ -265,6 +266,7 @@ Format: `find -a KEYWORD [MORE_KEYWORDS]`
 Examples:
 * `find -a Monkey King` returns two articles: `Monkey breaking window of NTU student’s hall after being aggravated` and `King Charles’ health crisis: the future of Britain becomes uncertain`
 
+### [3.2.6 Filtering all Articles](#32-managing-articles)
 ## [3.3. Other Commands](#3-features)
 
 ### [3.3.1. Viewing help : `help`](#33-other-commands)
