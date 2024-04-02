@@ -267,6 +267,19 @@ Examples:
 * `find -a Monkey King` returns two articles: `Monkey breaking window of NTU student’s hall after being aggravated` and `King Charles’ health crisis: the future of Britain becomes uncertain`
 
 ### [3.2.6 Filtering all Articles](#32-managing-articles)
+Filters article according to given fields
+
+Format: `filter -a [S/STATUS] [TAG/TAG] [FROM/START DATE] [TO/START DATE]`
+
+* All the prefixes need to be present, but the fields are allowed to be empty.
+* When the filter command is successful, the effects are permanent until another filter is applied. The filter will apply to listing and finding too.
+* To remove filter, run the filter command with all fields empty.
+* Filters will be reset when app is closed, make sure you finish your search before closing the application!
+* Filters will not compound, the latest filter will override all previous ones.
+* As of now, you can filter by start and end dates, tags and status of articles!
+
+Examples:
+`filter -a /S DRAFT /TAG /FROM /END` will will cause Press Planner to show only articles that have status `DRAFT`.
 ## [3.3. Other Commands](#3-features)
 
 ### [3.3.1. Viewing help : `help`](#33-other-commands)
