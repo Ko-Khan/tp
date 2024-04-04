@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.model.article.Article;
 import seedu.address.model.article.UniqueArticleList;
+import seedu.address.model.person.Person;
 
 /**
  * Wraps all data at the article-book level
@@ -107,6 +108,27 @@ public class ArticleBook implements ReadOnlyArticleBook {
     @Override
     public ObservableList<Article> getArticleList() {
         return articles.asUnmodifiableObservableList();
+    }
+
+    /**
+     * Makes links between articles and persons in the address book.
+     */
+    public void makeLinks(AddressBook addressBook) {
+        articles.makeLinks(addressBook.getPersonList());
+    }
+
+    /**
+     * Makes links between articles and the given person.
+     */
+    public void makeLinkPerson(Person person) {
+        articles.makeLinkPerson(person);
+    }
+
+    /**
+     * Reestablishes links between articles and the edited person.
+     */
+    public void setEditedPerson(Person target, Person editedPerson) {
+        articles.setEditedPerson(target, editedPerson);
     }
 
     @Override

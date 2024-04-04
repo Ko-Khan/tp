@@ -26,7 +26,7 @@ public class FilterArticleCommand extends ArticleCommand {
 
     public static final String COMMAND_PREFIX = "-a";
 
-    public static final String MESSAGE_SUCCESS = "filter online";
+    public static final String MESSAGE_SUCCESS = "Filter online\nUse rmfilter -a to display all articles again";
     private Predicate<Article> finalPredicate;
 
     /**

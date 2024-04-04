@@ -101,8 +101,10 @@ public class EditArticleCommand extends ArticleCommand {
                 .orElse(articleToEdit.getPublicationDate());
         Status status = editArticleDescriptor.getStatus().orElse(articleToEdit.getStatus());
 
-        return new Article(title, authors, sources, tags,
+        Article editedArticle = new Article(title, authors, sources, tags,
                 outlets, publicationDate, status); // Include all article attributes here.
+        editedArticle.setPersons(articleToEdit.getPersons());
+        return editedArticle;
     }
 
     @Override

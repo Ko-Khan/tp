@@ -20,7 +20,10 @@ public class FilterArticleCommandParser implements Parser<FilterArticleCommand> 
         ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(userInput, PREFIX_STATUS,
                 PREFIX_ARTICLETAG, PREFIX_START, PREFIX_END);
         if (!arePrefixesPresent(argMultimap, PREFIX_STATUS, PREFIX_ARTICLETAG, PREFIX_START, PREFIX_END)) {
-            throw new ParseException("The filter command does not follow the correct format");
+            throw new ParseException("Invalid command format!\nfilter: Applies a filter. "
+                    + "Parameters: S/Status TAG/tag ST/Start date EN/End date"
+                    + "\nExample: filter -a S/DRAFT TAG/Product Releases ST/01-01-2001 EN/03-03-2023"
+            );
         }
         String status = argMultimap.getValue(PREFIX_STATUS).get();
         String tagName = argMultimap.getValue(PREFIX_ARTICLETAG).get();

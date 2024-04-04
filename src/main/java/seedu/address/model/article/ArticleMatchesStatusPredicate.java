@@ -3,13 +3,15 @@ package seedu.address.model.article;
 
 import java.util.function.Predicate;
 
+import seedu.address.logic.parser.ParserUtil;
+import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.article.exceptions.InvalidStatusException;
 
 /**
  * Ensures that an {@code Article}'s {@code Status} matches the given status
  */
 public class ArticleMatchesStatusPredicate implements Predicate<Article> {
-    private Article.Status status;
+    private Enum<Article.Status> status;
 
     /**
      * Constructs an ArticleMatchesStatusPredicate
@@ -17,13 +19,9 @@ public class ArticleMatchesStatusPredicate implements Predicate<Article> {
      * @throws InvalidStatusException thrown when status entered is invalid.
      */
     public ArticleMatchesStatusPredicate(String s) throws InvalidStatusException {
-        if (s.equals("PUBLISHED")) {
-            status = Article.Status.PUBLISHED;
-        } else if (s.equals("DRAFT")) {
-            status = Article.Status.DRAFT;
-        } else if (s.equals("ARCHIVED")) {
-            status = Article.Status.ARCHIVED;
-        } else {
+        try {
+            status = ParserUtil.parseStatus(s);
+        } catch (ParseException e) {
             throw new InvalidStatusException();
         }
     }
@@ -49,7 +47,7 @@ public class ArticleMatchesStatusPredicate implements Predicate<Article> {
         ArticleMatchesStatusPredicate otherArticleMatchesStatusPredicate = (ArticleMatchesStatusPredicate) other;
         return this.status.equals(otherArticleMatchesStatusPredicate.getStatus());
     }
-    public Article.Status getStatus() {
+    public Enum<Article.Status> getStatus() {
         return this.status;
     }
 }

@@ -17,7 +17,7 @@ import java.util.Set;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.article.Article;
+import seedu.address.model.article.Article.Status;
 import seedu.address.model.article.Author;
 import seedu.address.model.article.Outlet;
 import seedu.address.model.article.PublicationDate;
@@ -254,7 +254,7 @@ public class ParserUtil {
     /**
      * Parses a {@code String status} into a {@code Status}.
      */
-    public static Enum<Article.Status> parseStatus(String status) throws ParseException {
+    public static Status parseStatus(String status) throws ParseException {
         requireNonNull(status);
         String trimmedStatus = status.trim();
         switch (trimmedStatus) {

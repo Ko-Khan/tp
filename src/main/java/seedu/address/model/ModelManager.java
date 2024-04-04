@@ -12,6 +12,8 @@ import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.article.Article;
+import seedu.address.model.article.ArticleWithinPersonPredicate;
+import seedu.address.model.person.NameWithinArticlePredicate;
 import seedu.address.model.person.Person;
 
 /**
@@ -41,6 +43,8 @@ public class ModelManager implements Model {
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
         filteredArticles = new FilteredList<>(this.articleBook.getArticleList());
         filter = new ArticleFilter();
+
+        this.articleBook.makeLinks(this.addressBook);
     }
 
     public ModelManager() {
@@ -107,6 +111,7 @@ public class ModelManager implements Model {
     @Override
     public void addPerson(Person person) {
         addressBook.addPerson(person);
+        articleBook.makeLinkPerson(person);
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
     }
 
@@ -115,6 +120,7 @@ public class ModelManager implements Model {
         requireAllNonNull(target, editedPerson);
 
         addressBook.setPerson(target, editedPerson);
+        articleBook.setEditedPerson(target, editedPerson);
     }
 
     @Override
@@ -165,6 +171,7 @@ public class ModelManager implements Model {
     @Override
     public void addArticle(Article article) {
         articleBook.addArticle(article);
+        article.makeLinks(addressBook.getPersonList());
         updateFilteredArticleList(PREDICATE_SHOW_ALL_ARTICLES);
     }
 
@@ -219,5 +226,17 @@ public class ModelManager implements Model {
 
     public ArticleFilter getFilter() {
         return filter;
+    }
+
+    @Override
+    public void lookupArticle(Article article) {
+        NameWithinArticlePredicate predicate = new NameWithinArticlePredicate(article);
+        updateFilteredPersonList(predicate);
+    }
+
+    @Override
+    public void lookupPerson(Person personToLookup) {
+        ArticleWithinPersonPredicate predicate = new ArticleWithinPersonPredicate(personToLookup);
+        updateFilteredArticleList(predicate);
     }
 }

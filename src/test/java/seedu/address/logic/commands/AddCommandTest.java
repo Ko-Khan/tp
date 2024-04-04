@@ -214,6 +214,16 @@ public class AddCommandTest {
         public ArticleFilter getFilter() {
             throw new AssertionError("This method should not be called.");
         }
+
+        @Override
+        public void lookupArticle(Article articleToLookup) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void lookupPerson(Person personToLookup) {
+            throw new AssertionError("This method should not be called.");
+        }
     }
 
     /**
