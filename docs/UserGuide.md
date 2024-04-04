@@ -249,7 +249,7 @@ Format: `list -a`
 
 Edits an existing article in the article book.
 
-Format: `edit INDEX [T/TITLE] [A/AUTHORS] [D/PUBLICATION_DATE] [src/SOURCES] [C/CATEGORY] [S/STATUS]...`
+Format: `edit INDEX [T/TITLE] [A/AUTHORS] [SRC/SOURCE] [TAG/Tag] [O/OUTLET] [D/PUBLICATION DATE] [S/STATUS]`
 
 * Edits the article at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index **must be a positive integer** 1, 2, 3, ...
 * At least one of the optional fields must be provided.
