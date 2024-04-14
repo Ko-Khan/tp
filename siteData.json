@@ -40,7 +40,7 @@
       "src": "DeveloperGuide.md",
       "title": "Developer Guide",
       "headings": {
-        "ab-3-developer-guide": "AB-3 Developer Guide",
+        "pressplanner-developer-guide": "PressPlanner Developer Guide",
         "acknowledgements": "Acknowledgements",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
@@ -53,6 +53,7 @@
         "implementation": "Implementation",
         "implemented-sort-persons-feature": "[Implemented] Sort persons feature",
         "implementing-filter-feature": "[Implementing] Filter feature",
+        "implemented-sort-articles-feature": "[Implemented] Sort articles feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-lookup-article": "[Proposed] Lookup Article",
         "proposed-templating-of-articles": "[Proposed] Templating of Articles",
@@ -112,7 +113,7 @@
     {
       "src": "UserGuide.md",
       "headings": {
-        "press-planner-user-guide": "Press Planner User Guide",
+        "pressplanner-user-guide": "PressPlanner User Guide",
         "table-of-contents": "Table Of Contents",
         "1-introduction": "1. Introduction",
         "1-1-using-this-guide": "1.1. Using this Guide",
