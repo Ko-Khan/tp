@@ -1,7 +1,6 @@
 @startuml
-!include style3.puml
+!include style2.puml
 skinparam ArrowFontStyle plain
-
 
 box <size:35>Logic</size> LOGIC_COLOR_T1
 participant ":LogicManager" as LogicManager LOGIC_COLOR
