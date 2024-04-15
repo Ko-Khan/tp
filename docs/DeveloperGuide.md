@@ -1117,12 +1117,30 @@ testers are expected to do more *exploratory* testing.
 ## **Planned Enhancements**
 
 1. **Make URL failure more explicit**: Currently when a URL cannot be opened the app shows that by not opening anything. This can be improved by showing an error message.
+
+
 1. **The filter command can work for individual prefixes**: Currently the filter command only works for all prefixes. It can be improved by allowing the user to filter by individual prefixes.
+
+
 1. **Automatically sort persons by their names in ascending alphabetical ordering**: Currently whenever the user makes an edit to a person's name or adds new person entries which may result in a violation of the previous ordering, the user would have to execute the `sort n/` command to re-sort the person entries. It can be improved by automatically sorting people whenever new entries, or certain edits to them are made to reduce such inconveniences to the user.
+
+
 1. **Automatically sort articles by their publication dates in descending order**: Currently whenever the user makes an edit to an article's publication date or adds new article entries which may result in a violation of the previous ordering, the user would have to execute the `sort -a d/` command to re-sort the articles. It can be improved by automatically sorting articles whenever new entries, or certain edits to them are made to reduce such inconveniences to the user.
+
+
 1. **Provide alternative methods to create associations between persons and articles**: Currently the user can only create associations between persons and articles when adding/editing the persons or articles. It might not always be desirable to create associations when adding/editing persons or articles. This can be improved by providing an alternative method to create associations between persons and articles by using IDs unique to each person and article. Instead of using names to create associations, the user can use the IDs to create associations between persons and articles.
+
+
 1. **Allow the user to filter people**: Currently the user can only filter articles. It can be improved by allowing the user to filter people as well.
+
+
 1. **Allow editing or deleting at any index for duplicate articles**: Currently, the user can only edit or delete the first article when there are multiple draft articles with the identical attributes. It can be improved by allowing the user to edit or delete any article with the same headline.
+
+
 1. **Enhance prefix validation**: Currently, the user can use duplicate prefixes for the same attribute when adding or editing persons or articles, or even add incorrect prefixes in their commands. It can be improved by enhancing the prefix validation to prevent the user from using duplicate prefixes for the same attribute and to guide the user to use the correct prefixes in their commands.
+
+
 1. **Enable greater ease in adding/editing/deleting cumulative attributes**: Currently these tags for both person and article, and contributor, interviewee and outlets for articles are not cumulative. If user wants to add one more, they will have to add the existing ones at the same time using edit. They cannot also delete any single one, but have to clear all existing ones and add the ones that they want to remain again using edit. The enhancement can let there be a index for those attributes enabling the user to add/edit/delete them with greater ease.
+
+
 1. **Allow non-alphanumeric inputs for tags**: Currently, the user can only use alphanumeric characters for tags. It can be improved by allowing the user to use non-alphanumeric characters for tags.
