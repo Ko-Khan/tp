@@ -128,8 +128,7 @@ Let's go over the basic PressPlanner workflow. Say you've just finished intervie
    <div markdown="block" class="alert alert-warning">
    
    **:warning: Warning**<br>
-   
-    You should only use headline (`h/`), date (`d/`) and status (`s/`) prefixes once each. If you use multiple prefixes only the last prefix's value will be used:<br>
+   You should only use headline (`h/`), date (`d/`) and status (`s/`) prefixes once each. If you use multiple prefixes only the last prefix's value will be used:<br>
         * eg. `add -a h/My Article d/20-10-2023 s/draft h/My Second Article` will add an article titled `My Second Article`.<br>
         * eg. `add -a h/My Article d/01-01-2024 s/draft d/02-02-2024` will add an article with the date `02-02-2024`.<br>
    </div>
@@ -176,6 +175,8 @@ Here are some important terms that will be used in this section:
    * For example using the sample data shown below, indexes 1 - 6 are valid for persons, and index 1 is valid for articles: 
 
       ![sample data](images/sampleData.png)
+
+<div style="page-break-after: always;"></div>
 
 1. Words in `UPPER_CASE` are the parameters to be supplied by you.
    * Refer to point 1 for the breakdown of the command structure.
@@ -294,8 +295,6 @@ Deletes the specified person from PressPlanner's address book.
 Format: `delete INDEX`
 
 * Deletes the person at the specified `INDEX`.
-
-<div style="page-break-after: always;"></div>
 
 Examples:
 * `delete 2` deletes the 2nd person in the current address book view.
@@ -438,8 +437,6 @@ Format: `clear`
 This action is irreversible. All persons will be deleted from the address book. The app will not prompt you to confirm this action.
 </div>
 
-<div style="page-break-after: always;"></div>
-
 ## [3.2. Managing Articles](#3-features)
 PressPlanner's article management system is designed to help you keep track of your articles and the people involved in them. As a freelancer, you lack the same resources a major firm has. PressPlanner helps you maximise the value you can get from your contacts by helping you keep track of which contacts you've worked with for different articles.
 
@@ -469,6 +466,8 @@ Here are some important terms that will be used in this section:
      3. `archived`.
    * The `STATUS` parameter is not case-sensitive (e.g. `draft` and `DRAFT` are both valid inputs).
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### [3.2.1. Adding an Article](#3-2-managing-articles) : `add -a`
 Adds a new article to PressPlanner's database.
